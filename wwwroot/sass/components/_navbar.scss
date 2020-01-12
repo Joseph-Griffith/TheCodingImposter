@@ -1,0 +1,16 @@
+﻿.navbar {
+    background-color: #313639;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+
+    &__title {
+        color: #fff;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    &__login {
+        justify-self: end;
+    }
+}

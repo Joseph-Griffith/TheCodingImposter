@@ -1,0 +1,6 @@
+﻿header {
+    grid-row: navbar-start / navbar-end;
+    grid-column: sidebar-start / full-end;
+
+    display: grid;
+}

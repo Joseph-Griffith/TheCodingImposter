@@ -1,0 +1,28 @@
+﻿*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem == 10px as browser default is 16px and 10px/16px = 62.5%
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [navbar-start] 10rem [navbar-end] 80vh min-content 40vw repeat(3, min-content);
+    // The main 8 columns never to be less than the size of their content and no larger than 140px
+    grid-template-columns: [sidebar-start] 30rem [sidebar-end full-start] minmax(6rem, 1fr)
+        [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end])
+        [center-end] minmax(6rem, 1fr)
+        [full-end]; // This is the best way to layout any page! See Section 9 video 107 for more info!
+    }

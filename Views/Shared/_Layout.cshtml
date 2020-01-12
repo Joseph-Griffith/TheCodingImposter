@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Coding Imposter</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar">
+            <a class="navbar__title" asp-area="" asp-controller="Home" asp-action="Index">The Coding Imposter</a>
+            <div class="navbar__login">
+                <button>Login</button>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="side-nav">
+            <a>Latest blogs</a>
+        </div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            &copy; 2020 - TheCodingImposter - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

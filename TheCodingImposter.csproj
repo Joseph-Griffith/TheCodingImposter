@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\sass\abstracts\" />
+    <Folder Include="wwwroot\sass\layout\" />
+    <Folder Include="wwwroot\sass\pages\" />
+    <Folder Include="wwwroot\scripts\" />
+  </ItemGroup>
+
+</Project>
