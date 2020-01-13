@@ -1,4 +1,4 @@
-﻿function collapseSection(element) {
+﻿function collapseSection(element, selector) {
     // get the height of the element's inner content, regardless of its actual size
     var sectionHeight = element.scrollHeight;
 
@@ -22,9 +22,10 @@
 
     // mark the section as "currently collapsed"
     element.setAttribute('collapsed', 'true');
+    selector.style.cssText = "transform: rotate(-90deg);";
 }
 
-function expandSection(element) {
+function expandSection(element, selector) {
     // get the height of the element's inner content, regardless of its actual size
     var sectionHeight = element.scrollHeight;
 
@@ -39,16 +40,18 @@ function expandSection(element) {
 
     // mark the section as "currently not collapsed"
     element.setAttribute('collapsed', 'false');
+    selector.style.cssText = "transform: rotate(0);";
 }
 
 document.querySelector('.sidenav__dropdown-btn').addEventListener('click', function (e) {
     var section = document.querySelector('.sidenav__dropdown-container');
+    var selector = document.querySelector('.sidenav__dropdown-selector');
     var isCollapsed = section.getAttribute('collapsed') === 'true';
 
     if (isCollapsed) {
-        expandSection(section)
+        expandSection(section, selector)
         section.setAttribute('collapsed', 'false')
     } else {
-        collapseSection(section)
+        collapseSection(section, selector)
     }
 });

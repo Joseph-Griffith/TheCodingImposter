@@ -2,45 +2,36 @@
     grid-row: main-start / main-end;
     grid-column: sidenav-start / sidenav-end;
     background-color: #fff;
-    display: grid;
-    grid-template-rows: minmax(min-content, max-content);
-    grid-template-columns: minmax(min-content, max-content);
-
-    &__items {
-        display: grid;
-        grid-template-rows: minmax(min-content, max-content);
-        grid-template-columns: minmax(min-content, max-content);
-        padding-top: 2rem;
-        padding-left: 2rem;
-    }
 
     &__item,
     &__dropdown-btn {
-        color: $color-grey-dark-3;
-        font-size: 2.4rem;
-        font-weight: 400;
-        text-decoration: none;
-        width: 100%;
-        outline: none;
+        padding: 1rem 0 1rem 2rem;
 
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+        @include backgroundSlideIn;
 
-        &:hover {
-            background-color: #eee;
+        & a {
+            color: $color-grey-dark-3;
+            font-size: 2.4rem;
+            font-weight: 400;
+            text-decoration: none;
+            outline: none;
+            display: block;
         }
     }
 
     &__dropdown {
         &-btn {
             cursor: pointer;
+            display: grid;
+            grid-template-columns: repeat(2, min-content);
+            align-content: center;
         }
 
         &-selector {
-            align-self: center;
-            font-size: 1.4rem;
-            transform: rotate(90deg);
+            margin-left: 1rem;
+            font-size: 2.6rem;
+            transform: rotate(-90deg);
+            transition: transform 0.3s;
         }
 
         &-container {
@@ -50,19 +41,13 @@
 
             & a {
                 display: block;
-                padding-left: 4rem;
+                padding: 1rem 0 1rem 5rem;
                 color: $color-grey-dark-3;
                 font-size: 1.6rem;
                 font-weight: 400;
                 text-decoration: none;
 
-                &:not(:last-child) {
-                    margin-bottom: 1.6rem;
-                }
-
-                &:last-child {
-                    margin-bottom: 2rem;
-                }
+                @include backgroundSlideIn;
             }
         }
     }

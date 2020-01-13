@@ -10,29 +10,9 @@
 </head>
 <body class="container">
     <header>
-        <nav role="navigation" class="navbar">
-            <div class="navbar__title">
-                <img class="navbar__title-logo" src="~/images/TheCodingImposterIcon.png" alt="The coding imposter logo" />
-                <a class="navbar__title-text" asp-area="" asp-controller="Home" asp-action="Index">The Coding Imposter</a>
-            </div>
-            <input class="navbar__search" type="search" name="searchbar" placeholder="Search" />
-        </nav>
+        <partial name="_NavBar" />
     </header>
-    <div role="navigation" class="sidenav">
-        <div class="sidenav__items">
-            <a class="sidenav__item" asp-controller="Home" asp-action="Index">Latest posts</a>
-            <a class="sidenav__dropdown-btn">
-                Categories
-                <i class="icon ion-md-arrow-dropdown"></i>
-            </a>
-            <div class="sidenav__dropdown-container" collapsed="true">
-                <a href="#">Everyday blogs</a>
-                <a href="#">ASP.Net Core</a>
-                <a href="#">Game development</a>
-            </div>
-            <a class="sidenav__item" asp-controller="About" asp-action="Index">About</a>
-        </div>
-    </div>
+    <partial name="_SideNav" />
     <main role="main">
         @RenderBody()
     </main>

@@ -1,0 +1,10 @@
+﻿@mixin backgroundSlideIn {
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #ffd1dc 50%, #ffd1dc);
+    transition: background-position 0.5s;
+
+    &:hover {
+        background-position: 0 0;
+    }
+}

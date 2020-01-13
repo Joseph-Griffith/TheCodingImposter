@@ -10,7 +10,9 @@
         align-items: center;
 
         &-logo {
-            transform: scale(70%);
+            padding: 1.4rem;
+            width: 12rem;
+            height: 12rem;
         }
 
         &-text {
@@ -28,7 +30,14 @@
         width: 50%;
         height: 3rem;
         padding-left: 1.4rem;
+        outline: none;
         border: none;
         border-radius: 50px;
+        transition: all 0.3s;
+
+        &:focus {
+            width: 70%;
+            height: 3.5rem;
+        }
     }
 }
