@@ -12,6 +12,8 @@ html {
 }
 
 body {
+    background-image: url("../../images/interlaced.png");
+    background-repeat: repeat;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     line-height: 1.6;
@@ -19,10 +21,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: [navbar-start] 10rem [navbar-end] 80vh min-content 40vw repeat(3, min-content);
-    // The main 8 columns never to be less than the size of their content and no larger than 140px
-    grid-template-columns: [sidebar-start] 30rem [sidebar-end full-start] minmax(6rem, 1fr)
+    grid-template-rows: [navbar-start] min-content [navbar-end main-start] min-content [main-end footer-start] 20rem[footer-end];
+
+    grid-template-columns: [sidenav-start] 30rem [sidenav-end full-start] minmax(6rem, 1fr)
         [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end])
         [center-end] minmax(6rem, 1fr)
-        [full-end]; // This is the best way to layout any page! See Section 9 video 107 for more info!
+        [full-end]; // This is the best way to layout any page!
     }

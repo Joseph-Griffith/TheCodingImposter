@@ -1,6 +1,7 @@
 ﻿header {
     grid-row: navbar-start / navbar-end;
-    grid-column: sidebar-start / full-end;
-
+    grid-column: sidenav-start / full-end;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.4);
     display: grid;
+    z-index: 1;
 }

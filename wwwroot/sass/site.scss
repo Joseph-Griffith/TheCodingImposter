@@ -1,4 +1,11 @@
-﻿@import "./base/_base.scss";
+﻿@import "abstracts/_variables.scss";
 
+@import "./base/_base.scss";
+@import "base/_utilities.scss";
+
+@import "components/_article-snippet.scss";
+@import "components/_footer.scss";
 @import "components/_header.scss";
+@import "components/_main.scss";
 @import "components/_navbar.scss";
+@import "components/_sidenav.scss";

@@ -7,10 +7,10 @@
   <ItemGroup>
     <Folder Include="Models\ViewModels\" />
     <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\sass\abstracts\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\sass\layout\" />
     <Folder Include="wwwroot\sass\pages\" />
-    <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 
 </Project>

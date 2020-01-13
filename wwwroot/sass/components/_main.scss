@@ -1,0 +1,25 @@
+﻿main {
+    grid-column: center-start / center-end;
+    padding: 5rem 0;
+    min-height: 102.5rem;
+
+    .main__header {
+        font-size: 4rem;
+        font-weight: 400;
+        text-transform:uppercase;
+        word-spacing: 2px;
+        text-align: center;
+        margin-bottom: 5rem;
+        letter-spacing: 1px;
+
+        &::after {
+            display: block;
+            height: 0.2rem;
+            background-color: #000;
+            content: "";
+            width: 20rem;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+    }
+}

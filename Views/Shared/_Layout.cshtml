@@ -5,30 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - The Coding Imposter</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body class="container">
     <header>
-        <nav class="navbar">
-            <a class="navbar__title" asp-area="" asp-controller="Home" asp-action="Index">The Coding Imposter</a>
-            <div class="navbar__login">
-                <button>Login</button>
+        <nav role="navigation" class="navbar">
+            <div class="navbar__title">
+                <img class="navbar__title-logo" src="~/images/TheCodingImposterIcon.png" alt="The coding imposter logo" />
+                <a class="navbar__title-text" asp-area="" asp-controller="Home" asp-action="Index">The Coding Imposter</a>
             </div>
+            <input class="navbar__search" type="search" name="searchbar" placeholder="Search" />
         </nav>
     </header>
-    <div>
-        <div class="side-nav">
-            <a>Latest blogs</a>
+    <div role="navigation" class="sidenav">
+        <div class="sidenav__items">
+            <a class="sidenav__item" asp-controller="Home" asp-action="Index">Latest posts</a>
+            <a class="sidenav__dropdown-btn">
+                Categories
+                <i class="icon ion-md-arrow-dropdown"></i>
+            </a>
+            <div class="sidenav__dropdown-container" collapsed="true">
+                <a href="#">Everyday blogs</a>
+                <a href="#">ASP.Net Core</a>
+                <a href="#">Game development</a>
+            </div>
+            <a class="sidenav__item" asp-controller="About" asp-action="Index">About</a>
         </div>
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
     </div>
+    <main role="main">
+        @RenderBody()
+    </main>
 
     <footer>
         <div>
-            &copy; 2020 - TheCodingImposter - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - TheCodingImposter
         </div>
     </footer>
+
+    <script src="~/scripts/collapsable.js"></script>
 </body>
 </html>
