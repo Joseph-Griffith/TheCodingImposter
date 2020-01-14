@@ -1,10 +1,22 @@
 ﻿.sidenav {
+    width: 25rem;
     grid-row: main-start / main-end;
     grid-column: sidenav-start / sidenav-end;
     background-color: #fff;
+    display: grid;
+    grid-template-rows: minmax(min-content, max-content) 1fr;
+    transition: all 0.8s;
 
-    &__item,
-    &__dropdown-btn {
+    & ul {
+        transition: all 0.8s;
+    }
+
+    &__hamburger-icon-container {
+        justify-self: end;
+        padding: 2rem;
+    }
+
+    &__item, &__dropdown-btn {
         padding: 1rem 0 1rem 2rem;
 
         @include backgroundSlideIn;
@@ -49,6 +61,15 @@
 
                 @include backgroundSlideIn;
             }
+        }
+    }
+
+    &-hide {
+        width: 8rem;
+
+        & ul {
+            // TODO: Need to create some JS to animate smoothly
+            display: none;
         }
     }
 }

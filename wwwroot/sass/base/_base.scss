@@ -23,7 +23,7 @@ body {
     display: grid;
     grid-template-rows: [navbar-start] min-content [navbar-end main-start] min-content [main-end footer-start] 20rem[footer-end];
 
-    grid-template-columns: [sidenav-start] 30rem [sidenav-end full-start] minmax(6rem, 1fr)
+    grid-template-columns: [sidenav-start] minmax(min-content, max-content) [sidenav-end full-start] minmax(6rem, 1fr)
         [center-start] repeat(8, [col-start] minmax(min-content, 20rem) [col-end])
         [center-end] minmax(6rem, 1fr)
         [full-end]; // This is the best way to layout any page!

@@ -1,0 +1,30 @@
+﻿.hamburger-icon {
+    cursor: pointer;
+    width: 4rem;
+
+    &:after,
+    &:before,
+    & div {
+        background-color: $color-grey-dark-3;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 0.3rem;
+        margin: 0.7rem 0;
+        transition: all .2s ease-in-out;
+    }
+
+    &-on {
+        &:before {
+            transform: translateY(1rem) rotate(135deg);
+        }
+
+        &:after {
+            transform: translateY(-1rem) rotate(-135deg);
+        }
+
+        & div {
+            transform: scale(0);
+        }
+    }
+}
