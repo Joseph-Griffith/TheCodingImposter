@@ -5,7 +5,7 @@
     background-color: #fff;
     display: grid;
     grid-template-rows: minmax(min-content, max-content) 1fr;
-    transition: all 0.8s;
+    transition: all 0.9s;
 
     & ul {
         transition: all 0.8s;
@@ -14,6 +14,7 @@
     &__hamburger-icon-container {
         justify-self: end;
         padding: 2rem;
+        transition: transform 0.9s;
     }
 
     &__item, &__dropdown-btn {
@@ -67,9 +68,12 @@
     &-hide {
         width: 8rem;
 
+        & > div {
+            transform: translateX(-7.8rem);
+        }
+
         & ul {
-            // TODO: Need to create some JS to animate smoothly
-            display: none;
+            transform: translateX(-25rem);
         }
     }
 }
