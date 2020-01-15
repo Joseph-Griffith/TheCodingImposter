@@ -7,7 +7,9 @@
     grid-template-rows: minmax(min-content, max-content) 1fr;
     transition: all 0.9s;
 
-    & ul {
+    &__items {
+        width: 0;
+        overflow: hidden;
         transition: all 0.8s;
     }
 
@@ -19,7 +21,7 @@
 
     &__item, &__dropdown-btn {
         padding: 1rem 0 1rem 2rem;
-
+        white-space: nowrap;
         @include backgroundSlideIn;
 
         & a {
@@ -67,13 +69,5 @@
 
     &-hide {
         width: 8rem;
-
-        & > div {
-            transform: translateX(-7.8rem);
-        }
-
-        & ul {
-            transform: translateX(-25rem);
-        }
     }
 }
